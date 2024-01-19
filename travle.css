@@ -70,7 +70,7 @@ h2{
 .line{
     height: 30rem;
     width: .1rem;
-    margin-top: 6rem;
+    margin-top: 10rem;
     background-color: #fff;
     position:relative;
     margin-left: 5rem;
@@ -92,58 +92,16 @@ h2{
     height: 1.5rem;
     width: 1.5rem;
     text-align: center;
-    border-radius: 50%;
-    background-color: #b0aaaa;
-    border: 10px 10px 20px #fdfbfb inset;
-    animation: sca 5s infinite ease-in-out;
-    transition: 10s;
-}
-@keyframes sca {
-    0%{transform: scale(.1);}
-    100%{transform: scale(1);}
-}
-.cri2{
-    height: 1.5rem;
-    width: 1.5rem;
-    text-align: center;
     margin-top: 5rem;
     border-radius: 50%;
     background-color: #b0aaaa;
     border: 10px 10px 20px #fdfbfb inset;
-    animation: sca 9s infinite ease-in-out;
-    transition: 10s;
+    transition: 2s;
 }
 h3{
     color: #fff;
 }
-.cri3{
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-top: 5rem;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #b0aaaa;
-    border: 10px 10px 20px #fdfbfb inset;
-    animation: sca 19s infinite ease-in-out;
-    transition: 10s;
-}
-h3{
-    color: #fff;
-}
-.cri4{
-    height: 1.5rem;
-    width: 1.5rem;
-    text-align: center;
-    margin-top: 5rem;
-    border-radius: 50%;
-    background-color: #b0aaaa;
-    border: 10px 10px 20px #fdfbfb inset;
-    animation: sca 19s infinite ease-in-out;
-    transition: 10s;
-}
-h3{
-    color: #fff;
-}
+
 .writ{
     position: relative;
     margin-top: 5rem;
@@ -158,15 +116,50 @@ p{
 .twi{
     display: flex;
 }
+.but{
+    border-radius: 1rem;
+    margin-top: 3rem;
+    background-color: blue;
+    border: none;
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    height:3rem;
+    transition: .4s;
+    width: 12rem;
+    /* text-align: center; */
+}
+#but{
+    font-size: 2rem;
+    margin-top: .5rem;
+}
+h5{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-left: 3rem;
+}
+.but:hover{
+    background-color: transparent;
+    border: 3px solid #2828ed;
+}
+.but:hover h5{
+    color: #f2f2f5;
+}
+/* .but:hover #but {
+    /* background-color: #000; */
+
+} */
 .sil{
     display: flex;
     gap: 5rem;
     margin-top: 5rem;
-    margin-left: 7rem;
+    margin-left: 24rem;
 }
-img{
+.imge{
     width: 100%;
     height: 100%;
+    position: absolute;
 }
 .bok{
     background-color: #fff;
@@ -178,6 +171,8 @@ img{
 .boi{
     background-color: #fb3636;
     height: 15rem;
+    display: flex;
+    flex-direction: column;
     border-radius: .5rem;
     overflow: hidden;
     width: 25rem;
