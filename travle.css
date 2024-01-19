@@ -158,6 +158,39 @@ p{
 .twi{
     display: flex;
 }
+.but{
+    border-radius: 1rem;
+    margin-top: 3rem;
+    background-color: #2828ed;
+    border: none;
+    display: flex;
+    font-size: 1rem;
+    font-weight: bold;
+    height:3rem;
+    width: 12rem;
+    /* text-align: center; */
+}
+#but{
+    font-size: 2rem;
+    margin-top: .5rem;
+}
+h5{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-left: 3rem;
+}
+.but:hover{
+    background-color: #fff;
+    border: 3px solid #2828ed;
+}
+.but:hover h5{
+    color: #2828ed;
+}
+.but:hover #but {
+    /* background-color: #000; */
+
+}
 .sil{
     display: flex;
     gap: 5rem;
