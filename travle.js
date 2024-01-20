@@ -1,59 +1,66 @@
 let count=0
 let run=()=>{
-    let imga=document.getElementsByClassName("img")
+    let imga=document.querySelectorAll('.back_img')
     for(var im=0; im<imga.length; im++){
         imga[im].style.opacity='0';
     }
     count++
-    if(count>=imga.length){
+    if(count>imga.length){
         count=1;
     }
     imga[count-1].style.opacity='1';
 }
 console.log(count);
-setInterval(run,4000);
 let counte=0;
 let con=()=>{
-    let cor=document.getElementsByClassName("cri")
+    let cor=document.querySelectorAll('.dot')
     for(var co=0; co<cor.length; co++){
-        cor[co].style.transform=`scale(.1)`
+        cor[co].style.transform=`scale(.1)`;
     }
     counte++
-    if(counte>=cor.length){
+    console.log(counte);
+    if(counte>cor.length){
         counte=1;
     }
     cor[counte-1].style.transform=`scale(1.2)`
 }
-setInterval(con,4000);
-console.log(counte);
-let cot=0;
-let sil=document.querySelectorAll('.imge');
-sil.forEach((elem,index)=>{
-    elem.style.left=`${index*100}%`;
-            // console.log(index + "hell");
-})
-let scroll=()=>{
-    sil.forEach((imge)=>{
-        imge.style.transform=`translateX(-${cot*100}%)`
-    })
-            // console.log(index,elem+"hell");
-}
-let start=setInterval(()=>{
-    cot++;
-    scroll();
-    if(cot>=sil.length-1){
-        count=-1;
+setInterval(con,3000);
+setInterval(run,3000);
+var app = document.getElementById('app');
+var typewriter = new Typewriter(app, {
+  loop: true,
+  delay: 75,
+});
+
+typewriter
+// .typeString('travle place')
+//   .pauseFor(2000)
+//   .deleteChars(12)
+  .typeString('kerala')
+  .pauseFor(2000)
+  .deleteChars(6)
+  .typeString('indonesia')
+  .pauseFor(2000)
+  .deleteChars(9)
+  .typeString('thailand')
+  .pauseFor(1000)
+  .deleteChars(8)
+  .typeString('bali')
+  .pauseFor(1000)
+  .deleteChars(4)
+//   .pauseFor(1000)
+  .start();
+  let coute=0;
+  let par=()=>{
+    let parh=document.querySelectorAll('.graph');
+    for(let pgr=0; pgr<=parh.length; pgr++){
+        parh[pgr].style.transform=`translateY(-100px)`
     }
-    console.log('heloo');
-},2000);
-let nxt=()=>{
-    cot++;
-    scroll();
-    if(cot>=sil.length){
-        cot=-1;
-    }if(cot==-1){
-        cot=0;
-        scroll();
+    coute++;
+    if(coute>parh.length){
+        coute=1
     }
+    parh[coute-1].style.transform=`translateY(-100px)`
 }
-nxt()
+setInterval(par,3000)
+  
