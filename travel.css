@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+body{
+    overflow: hidden;
+    background: url(/img/pexels-pixabay-163872.jpg);
+    background-size: cover;
+    background-position: center ;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+header{
+    /* why is position absolute is here */
+    /* position: absolute; */
+    /* why use margin in this parent container you padding instant of margin  */
+    /* margin-left: 5rem; */
+    /* margin-top: 1rem; */
+    display: flex;
+    height: 2.5rem;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 90vw;
+    margin: auto;
+    /* background-color: #f2f2f5; */
+
+}
+#menu{
+    display: none;
+}
+header nav a{
+    margin-left: 4.5rem;
+}
+header i {
+    margin-left: 30px;
+}
+/* this is the way of getting selector literally this is very disappointed to me 
+i{
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+h1{
+    color: aliceblue;
+    margin-left: 1rem;
+} 
+ h2{
+    position: relative;
+    margin-top: 1rem;
+    margin-left: 18rem;
+    color:#fdfbfb;
+} */
+.line{
+    height: 35rem;
+    width: .1rem;
+    background-color: white;
+    margin: 6rem 0px 0px 5rem;
+    border-radius: 1rem;
+}
+.dots_container{
+    /* i don't know are your gave margin too much
+    margin-top: 10rem;
+    margin-left: 4.3rem; */
+    /* height: 50%; */
+    /* width: 5%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    color: black;
+    padding-top: 4rem
+    ;
+}
+.content{
+    position: absolute;
+    width: 600px;
+    top: 40%;
+    left: 150px;
+}
+.content h1{
+    font-size: 90px;
+}
+@media(max-width: 500px){
+    .nav{
+        display: none;
+    }
+    #menu{
+        display: flex;
+    }
+    header h2{
+        display: none;
+    }
+}
