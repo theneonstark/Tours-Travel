@@ -9,33 +9,25 @@
 }
 body{
     overflow: hidden;
-    /* background: url(/img/pexels-pixabay-163872.jpg);
-    background-size: cover;
-    background-position: center ;
-    min-height: 100vh;
-    background-repeat: no-repeat; */
+}
+.phone{
+    display: none;
 }
 .back_img{
-    height: 100dvh;
+    height: 100%;
     width: 100%;
     position: absolute;
     z-index: -300;
     top: 0;
     left: 0;
-    transition: 3s;
+    transition: 2s;
 }
 header{
-    /* why is position absolute is here */
-    /* position: absolute; */
-    /* why use margin in this parent container you padding instant of margin  */
-    /* margin-left: 5rem; */
-    /* margin-top: 1rem; */
     display: flex;
     height: 2.5rem;
     align-items: center;
     justify-content: space-between;
     padding: 2.5rem 3rem;
-    /* background-color: #f2f2f5; */
 
 }
 #menu{
@@ -52,49 +44,20 @@ header .nav{
 .nav a:hover{
     border-bottom: 5px solid blue;
 }
-
-/* this is the way of getting selector literally this is very disappointed to me 
-i{
-    font-size: 1.5rem;
-    margin-top: 5px;
-    margin-left: 3px;
-}
-h1{
-    color: aliceblue;
-    margin-left: 1rem;
-} 
- h2{
-    position: relative;
-    margin-top: 1rem;
-    margin-left: 18rem;
-    color:#fdfbfb;
-} */
-section{
-    display: flex;
-}
 .line{
     height: 34rem;
     width: .1rem;
     background-color: white;
-    margin: 6rem 0px 0px 5rem;
+    margin: 6rem 0px 0px 2rem;
+    position: absolute;
     border-radius: 1rem;
 }
 .dots_container{
-    /* i don't know are your gave margin too much
-    margin-top: 10rem;
-    margin-left: 4.3rem; */
-    /* height: 50%; */
-    /* width: 5%; */
      display: flex;
      flex-direction: column;
      gap: 7rem;
      align-items: center;
      padding: 2rem 0;
-     /*
-     justify-content: center;
-     color: #f9efef;
-     padding-top: 4rem;
-     */
     }
     .dot{
         background-color: #bab5b5;
@@ -105,20 +68,42 @@ section{
         padding: .5rem;
         transition: 3s;
 }
+.place_name{
+    height: 2.5rem;
+    width: 12rem;
+    overflow: hidden;
+    /* background-color: #900909; */
+}
 .area_name{
-    padding: 16.5rem 5rem;
+    padding: 0rem 0rem 0rem 5rem;
     display: flex;
+    gap: 2rem;
+    /* align-items: center; */
+}
+.area{
+    display: flex;
+    padding: 6.5rem 0rem 0rem 0rem;
+    align-items: center;
+}
+.place_name #app{
     font-size: 2rem;
+    transition: 2s;
+    font-weight: bolder;
 }
 .para_graph{
     width: 30rem;
+    display: flex;
     height: 9.5rem;
-    overflow: hidden;
+    position: relative;
+    padding: 0rem 0rem 0rem 0rem;
+    /* overflow: hidden; */
+    flex-wrap: wrap;
+    flex-direction: row;
 }
-.graph{
+#graph{
     font-weight: bolder;
     font-size: 1rem;
-    transition: 3s;
+    transition: 2s;
 }
 .button{
     background-color: blue;
@@ -126,52 +111,344 @@ section{
     width: 8rem; 
     text-align: center;
     align-items: center;
-    margin-top: 2rem;
     border-radius: .5rem; 
-}
-.button a{
     font-size: 1.5rem; 
+}
+.mbox{
+    height: 10rem;
+    width: 30rem;
+    background-color: #fff;
+    position: absolute;
+    z-index: 400;
+    top: 0;
+    transform: translateX(40px);
+}
+.button {
     font-weight: bold;
 }
 .button:hover {
+    color: #bab5b5;
     border: 2px solid blue;
-    color: blue;
+    /* color: blue; */
     border-radius: 2rem; 
     background-color: transparent;
 }
 .fram{
-    height: 100vh;
-    width: 100%;
     display: flex;
-    align-items: center;
-    padding: 1.5rem 9rem;
-    overflow: hidden;
-    justify-content: flex-end;
+    flex-direction: column;
 }
 .imges{
-    width: 30rem;
-    height: 20rem;
-    position: relative;
     display: flex;
-    /* background-color: #fff; */
-    border:2px solid #fff;
     border-radius: .5rem;
+    gap: 5rem;
+    padding: 0rem 0rem 0rem 10rem; 
+    width: 54rem;
+    height: 30rem;
+    /* background-color: black; */
     overflow: hidden;
     
 }
 .imges .fram_img{
-    height: 100%;
+    transition: 2s;
+    height: auto;
+    border-radius: 1rem;
+    width: 18rem;
     /* position: absolute; */
-    width: 100%;
 }
-@media(max-width: 500px){
-    .nav{
+#search{
+    display: none;
+}
+#title{
+    font-size: 2rem;
+    color: #3c3c3d;
+}
+#dots_phone{
+    display: none;
+}
+@media(max-width:1444px) {
+    header h1{
+        font-size: 3rem;
+    }
+    nav{
+        font-size: 2rem;
+    }
+    .line{
+        height: 37rem;
+    }
+    .dots_container{
+        padding: 4rem 0rem;
+    }
+    .para_graph{
+        width: 30rem;
+        height: 10.5rem;
+    }
+    .graph{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:1200px) {
+    .imges{
+        width: 45rem;
+        padding: 0 0 0 1rem;
+    }
+}
+@media (max-width:1030px) {
+    header h1{
+        font-size: 2.8rem
+    }
+    .line{
         display: none;
+        height: 34rem;
+    }
+    #dots_phone{
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        padding: .5rem 34rem;
+        flex-direction: row;
+        /* transform: rotateX(20deg); */
+    }
+    .dots_p{
+        background-color: #fff;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%; 
+        text-align: center;
+        padding: .5rem;
+        transition: 3s;
+    }
+    .area{
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .area_name{
+    padding: 0rem 0rem 0rem 1rem;
+    /* gap: 6rem; */
+    }
+    /* .fram{
+        padding: 0rem 1.2rem;
+    } */
+    /* .dots_container{
+        padding: 2rem 0px;
+    } */
+    .para_graph{
+        width: 30rem;
+        height: 9.5rem;
+    }
+    .graph{
+        font-size: 1rem;
+    }
+    .imges{
+        padding: 4rem 0 0 0;
+        height: 28rem;
+        width: 42rem;
+    }
+}
+@media (max-width:965px){
+    .back_img{
+        height: 100%;
+        width: 100%;
+    }
+    #dots_phone{
+        padding: 0rem;
+    }
+    header{
+        padding: 2.5rem 1rem;
+    }
+    header h1{
+        font-size: 3rem
+    }
+    header .nav{
+        gap: 3rem;
+        padding: 0rem 0rem 0rem 3rem;
+    }
+    .area_name{
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem ;
+    gap: 6rem;
+    }
+    .area{
+    gap: 5rem;
+    padding: 0rem;
+    }
+    .imges{
+        padding: 0 0 0 6rem;
+        width: 52rem;
+        height: 26rem;
+    }
+    /* header h2 {
+        font-size:1rem;
+    } */
+}
+@media (max-width:825px){
+    header .nav{
+        gap: 2rem;
+        padding: 0rem 2rem 0rem 0rem;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size:1.5rem;
+    }
+    .back_img{
+        width: 100%;
+        height: 100%;
+    }
+    .area_name{
+        padding: 0rem 0rem 0rem 0rem;
+        gap: 5rem;
+    }
+    
+    .fram{
+        padding: 0rem;
+    }
+}
+@media (max-width:715px){
+    header h1{
+        font-size: 2rem
+    }
+    header .nav{
+        gap: 1rem;
+        font-size: 1.2rem;
+        padding: 0rem 0rem 0rem 5rem;
+    }
+    header h2 {
+        font-size:1rem;
+    }
+}
+@media (max-width:615px){
+    .back_img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width:655px) {
+    header .nav{
+        display: none;
+    }
+    .new{
+        display: flex;
+    }
+    #search{
+        display: flex;
+    }
+    .imges{
+        width: 40rem;
+    }
+}
+@media (max-width:620px) {
+   .imges{
+    width: 41rem;
+    padding: 0rem 0rem 0rem 0rem;
+}
+}
+@media (max-width:540px) {
+    .imges{
+        width: 20rem;
+        padding: 0rem 0rem 0rem 0rem;
+        gap: 2rem;
+    }
+}
+@media (max-width:430px) {
+    body{
+        background-color: #3c3c3d;
+        overflow-y: visible;
+    }
+    .back_img{
+        display: none;
+    }
+    header .nav{
+        display: none;
+    }
+    header{
+        justify-content: space-between;
+    }
+    .new{
+        display: flex;
+        gap: 2rem;
     }
     #menu{
         display: flex;
     }
-    header h2{
-        display: none;
+    #search{
+        display: flex;
     }
+    #dots_phone{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: .5rem 11rem;
+        flex-direction: row;
+        /* transform: rotateX(20deg); */
+    }
+    .dots_p{
+        background-color: #fff;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%; 
+        text-align: center;
+        padding: .5rem;
+    }
+    .phone{
+        width: 100%;
+        height: 20rem;
+        display: flex;
+        border-radius: 1rem;
+        position: relative;
+        background-color: #fff;
+        border: 2px solid #fff;
+    }
+    .phone_img{
+        /* display: none; */
+        width: 100%;
+        border-radius: 1rem;
+        height: 100%;
+        position: absolute;
+    }
+    .area_name{
+        display: flex;
+    }
+    #title{
+        color: #fff;
+    }
+    .line{
+        display:none;
+    }
+    .imges{
+        height: 23rem;
+        padding: 0 0 1rem 0;
+    }
+} 
+@media (max-width:380px) {
+    .para_graph{
+        width: 27rem;
+    }
+    #dots_phone{
+        padding: .5rem 9rem;
+    }
+}
+@media (max-width:320px) {
+    #dots_phone{
+        padding: .2rem 7rem;
+        gap: .5rem;
+    }
+    .para_graph{
+        width: 22rem;
+    }
+}
+
+#right{
+    position: absolute;
+    right: 12rem;
+}
+#right,#left{
+    color: black;
+    padding: 1rem 3rem;
+
+}
+#left{
+    transform: translateX(12rem);
 }

@@ -10,28 +10,38 @@
     </head>
     
     <body>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-      <!-- make the separate div for every container  -->
-    <!-- give the proper name your class for better understanding not like bot, head, for so on-->
-    <!-- where is your header tag -->
-    <header>
+        
+        <header>
         <h1>sukoiya</h1>
-        <!-- what about the nav tag -->
         <nav class="nav">
-            <!-- WTF all links with one anchor tag -->
             <a href="">News</a>
             <a href="">Destinations</a>
             <a href="">Blog</a>
             <a href="">Contact</a>
-            <i class='bx bx-search'></i>
+        <i class='bx bx-search'></i>
         </nav>
-        <i class='bx bx-menu' id="menu"></i>
+        <div class="new">
+        <i class='bx bx-search' id="search"></i>
         <h2>hello,user</h2>
+        <i class='bx bx-menu' id="menu" onclick="menu()"></i>
+        </div>
     </header>
-    <!-- what the hell is this all content in an single div  -->
-<section>
-    <div class="line">
-        <div class="dots_container">
+    <div class="phone">
+        <img src="img/kerala.jpg"class="phone_img">
+        <img src="img/indo.jpg"class="phone_img">
+        <img src="img/thailand.avif"class="phone_img">
+        <img src="img/bali.jpg"class="phone_img">
+     </div>
+     <section>
+         <div id="dots_phone">
+             <div class="dots_p"></div>
+             <div class="dots_p"></div>
+             <div class="dots_p"></div>
+             <div class="dots_p"></div>
+            </div>
+            <div class="area">
+                <div class="line">
+                    <div class="dots_container">
             <div class="dot"><span>1</span></div>
             <div class="dot"><span>2</span></div>
             <div class="dot"><span>3</span></div>
@@ -39,32 +49,33 @@
         </div>
     </div>
     <div class="area_name">
-        <div class="area">
-            <h1 id="app"></h1>
-            <div class="para_graph">
-                <p class="graph">Abundant with rich flora and fauna and over 25 animal sanctuaries and national parks, it's no surprise that Kerala is abundant with the most beautiful wildlife. The region is a haven for birdwatchers, with sightings of species including the Indian Koel, Ceylon Frogmouth, Loten's Sunbird and more.</p><br>
-                <p class="graph">These islands offer a varied range of adventures and scenic beauty. Derawan Islands are amongst the most beautiful island in Indonesia. From the sublime sea caves to the lavish resorts and lakes, this island paradise is one of the hidden beautiful places in Indonesia ands worth a reason to visit.</p><br>
-                <p class="graph">Thailand's stunning and varied landscape creates breathtaking scenery around practically every turn. It's hardly a surprise that most of the places on our list are right by the side of a tarmacked road as you could put a bit of road almost anywhere in the country  youll viewpoints along the way!</p><br>
-                <p class="graph">From the best viewpoints to see the Mt Agung and Mt Batur volcano, a stunning 180 degree view on the Indian Ocean with sunset or incredible temple views in Bali. There are so many impressive Bali viewpoints you have to visit! So in this blog post I will share the with the most impressive view! 1</p>
-            </div>
-            <div class="button">
-                <a href="#">explora</a>
+            <div class ="para_graph">
+                <div class="place_name">
+                    <h1 id="app">karela</h1>
+                    <h1 id="app">indonasiya</h1>
+                    <h1 id="app">bali</h1>
+                    <h1 id="app">thailand</h1>
+                </div>
+                <p id="graph" onclick="sun()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tempora voluptatum odio exercitationem minima quas eius? Dolor officia amet ut inventore neque voluptates, velit, totam perspiciatis possimus et eum beatae?</p>
+              <a href="#" class="button">explor</a>
             </div>
         </div>
-    </div>
-    <div class="fram">
-        <div class="imges">
-            <img src="img/bali.jpg" class="fram_img">
-            <img src="img/bob.jpg" class="fram_img">
-            <img src="img/boh.jpg" class="fram_img">
-            <img src="img/boi.jpeg" class="fram_img">
+        <div class="fram">
+            <div class="imges">
+        <img src="img/kerala.jpg"class="fram_img">
+        <img src="img/indo.jpg"class="fram_img">
+        <img src="img/thailand.avif"class="fram_img">
+        <img src="img/bali.jpg"class="fram_img">
+            </div>  
         </div>
     </div>
+    <button id="right" onclick="right()">Right</button>
+    <button id="left" onclick="left()">Left</button>
 </section>
-   <img src="img/kerala.jpg"class="back_img">
-   <img src="img/indo.jpg"class="back_img">
-   <img src="img/thailand.avif"class="back_img">
-   <img src="img/bali.jpg"class="back_img">
-    <script src="travle.js"></script>
-</body>
-</html>
+           <img src="img/kerala.jpg"class="back_img">
+           <img src="img/indo.jpg"class="back_img">
+           <img src="img/thailand.avif"class="back_img">
+           <img src="img/bali.jpg"class="back_img"> 
+           <script src="travle.js"></script>
+        </body>
+        </html>
