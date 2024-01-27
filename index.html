@@ -9,7 +9,7 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     
-    <body>
+    <body bgcolor="#000">
         
         <header>
         <h1>sukoiya</h1>
@@ -51,26 +51,37 @@
     <div class="area_name">
             <div class ="para_graph">
                 <div class="place_name">
-                    <h1 id="app">karela</h1>
-                    <h1 id="app">indonasiya</h1>
-                    <h1 id="app">bali</h1>
-                    <h1 id="app">thailand</h1>
+                    <h1 class="app">kerala</h1>
+                    <h1 class="app">indonasiya</h1>
+                    <h1 class="app">bali</h1>
+                    <h1 class="app">thailand</h1>
                 </div>
-                <p id="graph" onclick="sun()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tempora voluptatum odio exercitationem minima quas eius? Dolor officia amet ut inventore neque voluptates, velit, totam perspiciatis possimus et eum beatae?</p>
-              <a href="#" class="button">explor</a>
+                <p class="graph">Abundant with rich flora and fauna and over 25 animal sanctuaries and national parks, it's no surprise that Kerala is abundant with the most beautiful wildlife. The region is a haven for birdwatchers, with sightings </p>
+                <p class="graph">Indonesia, with its diverse landscapes and rich cultural tapestry, is truly a traveler's paradise. From the serene beaches of Bali to the majestic peaks of Mount Bromo, every corner of this archipelago offers a unique</p>
+                <p class="graph">Natural Beauty and Beaches: Bali boasts stunning landscapes and pristine beaches that attract visitors from around the world. Cultural Richness: The island's rich cultural heritage, seen in its temples, traditional</p>
+                <p class="graph">Thailand is popular as a tourist destination due to its geographical and cultural importance. It has some of the most exquisite beaches, rural getaways, Buddhist temples, and shopping malls.</p>
             </div>
+            <a href="#" class="button">explor</a>
         </div>
         <div class="fram">
             <div class="imges">
-        <img src="img/kerala.jpg"class="fram_img">
-        <img src="img/indo.jpg"class="fram_img">
-        <img src="img/thailand.avif"class="fram_img">
-        <img src="img/bali.jpg"class="fram_img">
+                <div class="imagen">
+                    <img src="img/kerala.jpg"class="fram_img">
+                </div>
+                <div class="imagen">
+                    <img src="img/indo.jpg"class="fram_img">
+                </div>
+                <div class="imagen">
+                    <img src="img/thailand.avif"class="fram_img">
+                </div>
+                <div class="imagen">
+                    <img src="img/bali.jpg"class="fram_img">
+                </div>
             </div>  
         </div>
     </div>
-    <button id="right" onclick="right()">Right</button>
-    <button id="left" onclick="left()">Left</button>
+    <i id="right" onclick="right(1)" class='bx bx-chevron-right' style='color:#f4efef'></i>
+    <i id="left" onclick="left(-1)"class='bx bx-chevron-left' style='color:#f4efef'></i>
 </section>
            <img src="img/kerala.jpg"class="back_img">
            <img src="img/indo.jpg"class="back_img">

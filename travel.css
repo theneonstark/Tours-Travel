@@ -71,40 +71,50 @@ header .nav{
 .place_name{
     height: 2.5rem;
     width: 12rem;
+    /* position: relative; */
     overflow: hidden;
     /* background-color: #900909; */
 }
 .area_name{
     padding: 0rem 0rem 0rem 5rem;
     display: flex;
-    gap: 2rem;
+    /* gap: 2rem; */
+    flex-wrap: wrap;
     /* align-items: center; */
 }
 .area{
     display: flex;
-    padding: 6.5rem 0rem 0rem 0rem;
+    padding: 6rem 0rem 0rem 0rem;
     align-items: center;
 }
-.place_name #app{
+.place_name .app{
     font-size: 2rem;
     transition: 2s;
+    color: #bab5b5;
+    /* position: absolute; */
+    /* display: none; */
+    /* transform: scale(); */
     font-weight: bolder;
 }
 .para_graph{
     width: 30rem;
     display: flex;
-    height: 9.5rem;
+    height: 10rem;
     position: relative;
-    padding: 0rem 0rem 0rem 0rem;
-    /* overflow: hidden; */
+    /* padding: 0rem 0rem 0rem 0rem; */
+    overflow: hidden;
     flex-wrap: wrap;
     flex-direction: row;
 }
-#graph{
-    font-weight: bolder;
-    font-size: 1rem;
+.graph{
+    /* display: none; */
+    height: 10rem;
+    width: 30rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    overflow: hidden;
     transition: 2s;
-}
+ } 
 .button{
     background-color: blue;
     height: 2.5rem;
@@ -127,7 +137,7 @@ header .nav{
     font-weight: bold;
 }
 .button:hover {
-    color: #bab5b5;
+    color: #fff;
     border: 2px solid blue;
     /* color: blue; */
     border-radius: 2rem; 
@@ -136,24 +146,27 @@ header .nav{
 .fram{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    padding: 0rem 0rem 0rem 4rem;
 }
 .imges{
-    display: flex;
-    border-radius: .5rem;
-    gap: 5rem;
-    padding: 0rem 0rem 0rem 10rem; 
-    width: 54rem;
-    height: 30rem;
-    /* background-color: black; */
-    overflow: hidden;
-    
+    width: 45rem;
+    position: relative;
+    height: 24rem;
+    /* background-color: #fff; */
 }
-.imges .fram_img{
-    transition: 2s;
-    height: auto;
-    border-radius: 1rem;
-    width: 18rem;
-    /* position: absolute; */
+.imges .imagen{
+    width: 25rem;
+    /* position: relative; */
+    height: 30rem;
+    position: absolute;
+
+    /* background-color: #000; */
+}
+.imagen .fram_img{
+    width: 100%;
+    position: absolute;
+    height: 100%;
 }
 #search{
     display: none;
@@ -164,6 +177,23 @@ header .nav{
 }
 #dots_phone{
     display: none;
+}
+#right{
+    position: absolute;
+    right: 12rem;
+}
+#right,#left{
+    color: #fff;
+    background-color:#00000082;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    /* padding: 1rem 3rem; */
+    font-size: 5rem;
+
+}
+#left{
+    transform: translateX(12rem);
 }
 @media(max-width:1444px) {
     header h1{
@@ -180,17 +210,19 @@ header .nav{
     }
     .para_graph{
         width: 30rem;
-        height: 10.5rem;
+        height: 11.5rem;
+        overflow: hidden;
     }
-    .graph{
+    /* .graph{
         font-size: 1.5rem;
-    }
+    } */
 }
 @media (max-width:1200px) {
-    .imges{
-        width: 45rem;
-        padding: 0 0 0 1rem;
-    }
+    .area_name{
+        padding: 0rem 0rem 0rem 4rem;
+        flex-wrap: wrap;
+        /* gap: 6rem; */
+        }
 }
 @media (max-width:1030px) {
     header h1{
@@ -220,10 +252,11 @@ header .nav{
     .area{
         flex-wrap: wrap;
         justify-content: center;
-
+        padding: 0rem 0rem 0rem 0rem;
     }
     .area_name{
     padding: 0rem 0rem 0rem 1rem;
+    flex-wrap: wrap;
     /* gap: 6rem; */
     }
     /* .fram{
@@ -238,11 +271,6 @@ header .nav{
     }
     .graph{
         font-size: 1rem;
-    }
-    .imges{
-        padding: 4rem 0 0 0;
-        height: 28rem;
-        width: 42rem;
     }
 }
 @media (max-width:965px){
@@ -267,17 +295,13 @@ header .nav{
         flex-direction: column;
         align-items: center;
         padding: 0rem ;
-    gap: 6rem;
+    /* gap: 2rem; */
     }
     .area{
-    gap: 5rem;
+    gap: 1rem;
     padding: 0rem;
     }
-    .imges{
-        padding: 0 0 0 6rem;
-        width: 52rem;
-        height: 26rem;
-    }
+  
     /* header h2 {
         font-size:1rem;
     } */
@@ -299,12 +323,20 @@ header .nav{
     }
     .area_name{
         padding: 0rem 0rem 0rem 0rem;
-        gap: 5rem;
+        /* gap: 5rem; */
     }
     
     .fram{
         padding: 0rem;
     }
+    #right, #left{
+        position: absolute;
+        top: 50%;
+    }
+    #left{
+        transform: translateX(1px);
+    }
+    
 }
 @media (max-width:715px){
     header h1{
@@ -335,21 +367,27 @@ header .nav{
     #search{
         display: flex;
     }
-    .imges{
-        width: 40rem;
-    }
 }
 @media (max-width:620px) {
-   .imges{
-    width: 41rem;
-    padding: 0rem 0rem 0rem 0rem;
-}
+
 }
 @media (max-width:540px) {
     .imges{
-        width: 20rem;
-        padding: 0rem 0rem 0rem 0rem;
-        gap: 2rem;
+        height: 24rem;
+    }
+    #right{
+        position: absolute;
+        right: 7rem;
+    }
+    #right,#left{
+        color: black;
+        /* padding: 1rem 3rem; */
+    
+    }
+    #left{
+        position: absolute;
+        transform: translateX(1.5rem);
+        /* z-index: 1; */
     }
 }
 @media (max-width:430px) {
@@ -380,7 +418,7 @@ header .nav{
         display: flex;
         gap: 1rem;
         align-items: center;
-        padding: .5rem 11rem;
+        padding: .5rem 9rem;
         flex-direction: row;
         /* transform: rotateX(20deg); */
     }
@@ -417,10 +455,13 @@ header .nav{
     .line{
         display:none;
     }
-    .imges{
-        height: 23rem;
-        padding: 0 0 1rem 0;
+    #right, #left{
+        top: 30%;
+        font-size: 4rem;
+        height: 4rem;
+        width: 4rem;
     }
+
 } 
 @media (max-width:380px) {
     .para_graph{
@@ -442,13 +483,10 @@ header .nav{
 
 #right{
     position: absolute;
-    right: 12rem;
+    right: 1rem;
 }
 #right,#left{
     color: black;
-    padding: 1rem 3rem;
+    /* padding: 1rem 1rem; */
 
-}
-#left{
-    transform: translateX(12rem);
 }
